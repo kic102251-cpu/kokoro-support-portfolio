@@ -166,6 +166,12 @@ export default function HomePage() {
           >
             サンプル構成を見る
           </a>
+          <a
+            href="/care"
+            className="hidden rounded-full border border-[#a8dcd8] bg-white px-5 py-2.5 text-sm font-bold text-[#0f5f5a] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#eefaf7] xl:inline-flex"
+          >
+            介護版デモ
+          </a>
         </div>
       </header>
 
