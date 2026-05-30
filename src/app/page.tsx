@@ -25,13 +25,11 @@ const worries = [
 ];
 
 const targets = [
-  "うつ病",
-  "双極性障害",
-  "統合失調症",
-  "発達障害",
-  "不安障害",
-  "ひきこもり支援",
-  "退院後の在宅生活支援",
+  "退院後の療養",
+  "服薬管理",
+  "体調確認",
+  "リハビリ",
+  "家族支援",
 ];
 
 const services = [
@@ -103,17 +101,17 @@ const faqs = [
       "状態や支援目的に応じて調整します。週1回から開始し、必要に応じて回数を相談する形を想定しています。",
   },
   {
-    question: "ひきこもり状態でも利用できますか？",
+    question: "退院後すぐでも相談できますか？",
     answer:
-      "利用できます。無理に外出を促すのではなく、ご本人のペースに合わせて生活の安定から支援します。",
+      "相談できます。退院後の療養、服薬管理、体調確認を含めて、ご自宅で安心して過ごせるよう支援します。",
   },
 ];
 
 const staff = [
   {
-    name: "管理者 / 精神科認定看護師",
+    name: "管理者 / 訪問看護師",
     initial: "K",
-    text: "病棟と地域支援の経験をもとに、退院後の暮らしを途切れず支えます。",
+    text: "病棟と地域支援の経験をもとに、退院後の療養を途切れず支えます。",
   },
   {
     name: "訪問看護師",
@@ -141,9 +139,9 @@ export default function HomePage() {
             </span>
             <span className="min-w-0">
               <span className="block text-sm font-bold sm:text-base">
-                こころサポート訪問看護ステーション
+                みらい訪問看護ステーション
               </span>
-              <span className="block text-xs text-[#51717a]">精神科訪問看護専門</span>
+              <span className="block text-xs text-[#51717a]">地域で暮らす方を支える訪問看護</span>
             </span>
           </a>
           <nav className="hidden items-center gap-6 text-sm font-medium text-[#365963] lg:flex">
@@ -184,7 +182,7 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-[#b7e8dd] bg-white/80 px-4 py-2 text-sm font-bold text-[#0f766e] shadow-sm backdrop-blur">
               <MapPin size={16} aria-hidden="true" />
-              大阪市・東大阪市・八尾市に対応
+              〇〇市・〇〇町周辺に対応
             </div>
             <h1
               aria-label="一人で抱え込まなくて大丈夫。"
@@ -213,7 +211,7 @@ export default function HomePage() {
             </div>
             <div className="animate-fade-up animate-delay-3 mt-10 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
               {[
-                ["専門分野", "精神科訪問看護"],
+                ["専門分野", "訪問看護"],
                 ["対象", "ご本人・ご家族"],
                 ["相談", "初回相談無料"],
               ].map(([label, value]) => (
@@ -233,12 +231,12 @@ export default function HomePage() {
       <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div className="animate-fade-up">
-            <p className="text-sm font-bold text-[#0f766e]">精神科訪問看護とは</p>
+            <p className="text-sm font-bold text-[#0f766e]">訪問看護とは</p>
             <h2 className="mt-3 text-3xl font-extrabold leading-[1.35] text-[#12323b] sm:text-4xl">
               通院だけでは届きにくい日常を、自宅で支える看護サービスです。
             </h2>
             <p className="mt-5 leading-8 text-[#496a72]">
-              精神科訪問看護は、看護師がご自宅へ伺い、症状の確認、服薬、生活リズム、ご家族の不安まで継続的に支援するサービスです。病気そのものだけでなく、生活のしづらさや孤立感にも目を向けます。
+              訪問看護は、看護師がご自宅へ伺い、体調確認、服薬管理、療養生活、ご家族の不安まで継続的に支援するサービスです。病気そのものだけでなく、生活のしづらさや退院後の暮らしにも目を向けます。
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -321,13 +319,13 @@ export default function HomePage() {
       <section className="bg-[#eaf7f8] px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <p className="text-sm font-bold text-[#0f766e]">対応エリア</p>
+          <p className="text-sm font-bold text-[#0f766e]">対応エリア</p>
             <h2 className="mt-2 text-2xl font-extrabold leading-[1.4] text-[#12323b] sm:text-3xl">
-              大阪市、東大阪市、八尾市を中心に訪問します。
+              〇〇市、〇〇町周辺を中心に訪問します。
             </h2>
           </div>
           <div className="grid gap-3 sm:grid-cols-3">
-            {["大阪市", "東大阪市", "八尾市"].map((area) => (
+            {["〇〇市", "〇〇町", "周辺地域"].map((area) => (
               <div
                 key={area}
                 className="rounded-lg border border-white bg-white/80 px-6 py-4 text-center font-bold text-[#0f5f5a] shadow-sm"
@@ -396,7 +394,7 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <p className="text-sm font-bold text-[#0f766e]">スタッフ紹介</p>
             <h2 className="mt-3 text-3xl font-extrabold leading-[1.35] text-[#12323b] sm:text-4xl">
-              精神科と地域生活支援を知るスタッフが対応します。
+              医療と地域生活支援を知るスタッフが対応します。
             </h2>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -507,8 +505,8 @@ export default function HomePage() {
       <footer className="bg-[#12323b] px-4 py-10 text-white sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-lg font-extrabold">こころサポート訪問看護ステーション</p>
-            <p className="mt-2 text-sm text-white/70">精神科訪問看護 / 大阪市・東大阪市・八尾市</p>
+            <p className="text-lg font-extrabold">みらい訪問看護ステーション</p>
+            <p className="mt-2 text-sm text-white/70">訪問看護 / 〇〇市・〇〇町周辺</p>
           </div>
           <div className="flex flex-wrap gap-3 text-sm text-white/80">
             <span className="inline-flex items-center gap-2">

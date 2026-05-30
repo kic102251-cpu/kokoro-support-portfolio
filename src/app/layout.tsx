@@ -10,9 +10,9 @@ const notoSansJp = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "こころサポート訪問看護ステーション | 精神科訪問看護",
+  title: "みらい訪問看護ステーション | 訪問看護",
   description:
-    "大阪市、東大阪市、八尾市で精神科訪問看護を行う架空事業所の営業用ポートフォリオサイトです。",
+    "〇〇市・〇〇町周辺で訪問看護を行う架空事業所の営業用ポートフォリオサイトです。",
 };
 
 export default function RootLayout({
